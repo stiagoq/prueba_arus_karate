@@ -1,1 +1,0 @@
-# prueba_arus_api_karate
