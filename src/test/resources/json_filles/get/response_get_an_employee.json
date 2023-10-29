@@ -1,0 +1,11 @@
+{
+  "status": "success",
+  "data": {
+    "id": "#number",
+    "employee_name": "#present",
+    "employee_salary": "#present",
+    "employee_age": "#present",
+    "profile_image": ""
+  },
+  "message": "##present"
+}

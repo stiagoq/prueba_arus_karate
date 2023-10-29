@@ -1,0 +1,13 @@
+{
+  "upload1":{
+    "name": "Stefany Rodriguez",
+    "salary": 40000
+  },
+  "upload2": {
+    "age": 24
+  },
+  "upload3": {
+    "age": 24,
+    "salar": 432123
+  }
+}

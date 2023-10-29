@@ -1,0 +1,19 @@
+{
+  "employee1" : {
+    "name":"Sara Munera",
+    "salary": 300000,
+    "age": 27
+  },
+
+  "employee2" : {
+    "name":"Gorge Manuel",
+    "salary": 230000,
+    "age": 27
+  },
+
+  "employee3" : {
+    "name":"Samara Munera",
+    "salary": 340000,
+    "age": 27
+  }
+}
