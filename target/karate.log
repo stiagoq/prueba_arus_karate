@@ -34875,3 +34875,223 @@ src/test/java/delete.feature:13
 
 
 23:28:41.080 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/delete.feature
+09:34:15.094 [main]  INFO  com.intuit.karate - Karate version: 1.4.1
+09:34:15.612 [main]  DEBUG com.intuit.karate.Suite - [config] karate-config.js
+09:34:16.749 [main]  INFO  com.intuit.karate - Env is:  null 
+09:34:16.775 [main]  INFO  com.intuit.karate - >> lock acquired, begin callSingle: post.feature@successful
+09:34:16.784 [main]  INFO  c.intuit.karate.core.FeatureRuntime - src/test/java/features/post.feature - call by tag at line 26: successful
+09:34:17.044 [main]  DEBUG com.intuit.karate - request:
+1 > POST https://dummy.restapiexample.com/api/v1/create
+1 > Content-Type: application/json; charset=UTF-8
+1 > Content-Length: 42
+1 > Host: dummy.restapiexample.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+{"name":"Salome","salary":200000,"age":24}
+
+09:34:17.993 [main]  DEBUG com.intuit.karate - response time in milliseconds: 820
+1 < 200
+1 < Date: Mon, 30 Oct 2023 14:34:17 GMT
+1 < Server: Apache
+1 < Cache-Control: no-cache, private
+1 < Cache-Control: max-age=21600
+1 < X-RateLimit-Limit: 60
+1 < X-RateLimit-Remaining: 58
+1 < Upgrade: h2,h2c
+1 < Connection: Upgrade
+1 < Expires: Mon, 30 Oct 2023 20:34:17 GMT
+1 < Vary: Accept-Encoding
+1 < host-header: c2hhcmVkLmJsdWVob3N0LmNvbQ==
+1 < X-Endurance-Cache-Level: 2
+1 < X-nginx-cache: WordPress
+1 < Content-Type: application/json
+{"status":"success","data":{"name":"Salome","salary":200000,"age":24,"id":81},"message":"Successfully! Record has been added."}
+
+09:34:17.999 [main]  INFO  com.intuit.karate - [print] {
+  "status": "success",
+  "data": {
+    "name": "Salome",
+    "salary": 200000,
+    "age": 24,
+    "id": 81
+  },
+  "message": "Successfully! Record has been added."
+}
+ 
+09:34:18.003 [main]  INFO  com.intuit.karate - [print] 81 
+09:34:18.004 [main]  INFO  com.intuit.karate - << lock released, cached callSingle: post.feature@successful
+09:34:18.010 [main]  DEBUG com.intuit.karate - request:
+1 > DELETE https://dummy.restapiexample.com/api/v1/delete/81
+1 > Host: dummy.restapiexample.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+09:34:18.625 [main]  DEBUG com.intuit.karate - response time in milliseconds: 489
+1 < 429
+1 < Date: Mon, 30 Oct 2023 14:34:18 GMT
+1 < Server: Apache
+1 < X-RateLimit-Limit: 60
+1 < X-RateLimit-Remaining: 57
+1 < retry-after: 59
+1 < x-ratelimit-reset: 1698676517
+1 < Cache-Control: no-cache, private
+1 < Upgrade: h2,h2c
+1 < Connection: Upgrade
+1 < Vary: Accept-Encoding
+1 < host-header: c2hhcmVkLmJsdWVob3N0LmNvbQ==
+1 < X-Endurance-Cache-Level: 2
+1 < X-nginx-cache: WordPress
+1 < Content-Type: text/html; charset=UTF-8
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Too Many Requests</title>
+
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+        <!-- Styles -->
+        <style>
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .code {
+                border-right: 2px solid;
+                font-size: 26px;
+                padding: 0 15px 0 15px;
+                text-align: center;
+            }
+
+            .message {
+                font-size: 18px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-center position-ref full-height">
+            <div class="code">
+                429            </div>
+
+            <div class="message" style="padding: 10px;">
+                Too Many Requests            </div>
+        </div>
+    </body>
+</html>
+
+
+09:34:18.658 [main]  INFO  com.intuit.karate - Env is:  null 
+09:34:18.663 [main]  DEBUG com.intuit.karate - request:
+1 > DELETE https://dummy.restapiexample.com/api/v1/delete/D*
+1 > Host: dummy.restapiexample.com
+1 > Connection: Keep-Alive
+1 > User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.7)
+1 > Accept-Encoding: gzip,deflate
+
+
+09:34:19.278 [main]  DEBUG com.intuit.karate - response time in milliseconds: 474
+1 < 429
+1 < Date: Mon, 30 Oct 2023 14:34:19 GMT
+1 < Server: Apache
+1 < X-RateLimit-Limit: 60
+1 < X-RateLimit-Remaining: 56
+1 < retry-after: 58
+1 < x-ratelimit-reset: 1698676517
+1 < Cache-Control: no-cache, private
+1 < Upgrade: h2,h2c
+1 < Connection: Upgrade
+1 < Vary: Accept-Encoding
+1 < host-header: c2hhcmVkLmJsdWVob3N0LmNvbQ==
+1 < X-Endurance-Cache-Level: 2
+1 < X-nginx-cache: WordPress
+1 < Content-Type: text/html; charset=UTF-8
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>Too Many Requests</title>
+
+        <!-- Fonts -->
+        <link rel="dns-prefetch" href="//fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+
+        <!-- Styles -->
+        <style>
+            html, body {
+                background-color: #fff;
+                color: #636b6f;
+                font-family: 'Nunito', sans-serif;
+                font-weight: 100;
+                height: 100vh;
+                margin: 0;
+            }
+
+            .full-height {
+                height: 100vh;
+            }
+
+            .flex-center {
+                align-items: center;
+                display: flex;
+                justify-content: center;
+            }
+
+            .position-ref {
+                position: relative;
+            }
+
+            .code {
+                border-right: 2px solid;
+                font-size: 26px;
+                padding: 0 15px 0 15px;
+                text-align: center;
+            }
+
+            .message {
+                font-size: 18px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-center position-ref full-height">
+            <div class="code">
+                429            </div>
+
+            <div class="message" style="padding: 10px;">
+                Too Many Requests            </div>
+        </div>
+    </body>
+</html>
+
+
+09:34:19.783 [main]  INFO  com.intuit.karate.Suite - <<pass>> feature 1 of 1 (0 remaining) src/test/java/features/delete.feature

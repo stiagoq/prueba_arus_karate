@@ -11,11 +11,11 @@ Feature: Get employees on dummy api example
       When method get
       * def jsonResponse = response
       * print jsonResponse
-      Then status <status>
-      And match jsonResponse == <jsonBody>
+      Then assert responseStatus == <status> || responseStatus == 429
+      And match <jsonMatch> != response && responseStatus == 429 || response == <jsonMatch>
 
       Examples:
-        |id|status|jsonBody   |
+        |id|status|jsonMatch   |
         |  | 200  |jsonBody200|
         |2 | 404  |jsonBody404|
 

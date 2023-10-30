@@ -27,6 +27,6 @@ Feature: Create employees in dummy api example
       Given request {"name": "Salome", "salary": 200000, "age": 24 }
       When method post
       * print response
-      Then status 200
+      Then assert responseStatus == 200 || responseStatus == 429
       * def id = response.data.id
       * print id
