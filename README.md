@@ -6,12 +6,12 @@ This repository contains a Automation test for an API with Karate framework.
 
 
 ## Table of contents
- - [Introduction](https://github.com/stiagoq/prueba_arus_karate/new/main?readme=1#introduction)
- - [Getting started](https://github.com/stiagoq/prueba_arus_karate/new/main?readme=1#getting-stared)
- - [Project setup](https://github.com/stiagoq/Karate_tyba/edit/main/README.md#project-setup)
- - [Running the tests](https://github.com/stiagoq/prueba_arus_karate/new/main?readme=1#running-test)
- - [General implementation details](https://github.com/stiagoq/prueba_arus_karate/new/main?readme=1#general-implementation-details)
- - [Tests](https://github.com/stiagoq/prueba_arus_karate/new/main?readme=1#test)
+ - [Introduction](https://github.com/stiagoq/prueba_arus_karate/tree/main#introduction)
+ - [Getting started](https://github.com/stiagoq/prueba_arus_karate/tree/main#getting-stared)
+ - [Project setup](https://github.com/stiagoq/prueba_arus_karate/tree/main#project-setup)
+ - [Running the tests](https://github.com/stiagoq/prueba_arus_karate/tree/main#running-test)
+ - [General implementation details](https://github.com/stiagoq/prueba_arus_karate/tree/main#general-implementation-details)
+ - [Tests](https://github.com/stiagoq/prueba_arus_karate/tree/main#test)
 
 ## Introduction 
 
