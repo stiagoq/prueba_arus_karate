@@ -58,16 +58,11 @@ The basic elements to create a scenario in karate such as; feature and scenario.
 
 In karate is important the [order of folders](https://github.com/karatelabs/karate#naming-conventions) that contain the files with test scenarios because karate must know where the resources necessary for execution automation test are located.
 ```bash
-   📦prueba_tyba_serenity_bdd
+   📦prueba_arus_karate
    ┣ 📂src
    ┃ ┣ 📂 main
-   ┃ ┃ ┣ 📂java
-   ┃ ┃ ┃ 
-   ┃ ┃ ┃   
-   ┃ ┃ ┃    
-   ┃ ┃ ┃         
-   ┃ ┃ ┃        
-   ┃ ┃ ┃       
+   ┃ ┃ ┣ 📂java       
+   ┃ ┃      
    ┃ ┣ 📂test
    ┃ ┃ ┣ 📂java
    ┃ ┃   ┣ 📂features
