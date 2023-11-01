@@ -15,10 +15,9 @@ Feature: Create employees in dummy api example
     Then status 200
     And match response == jsonBody200
 
-    @successful
-    Scenario: Create employees with method post for delete feature
-      Given request employee
-      When method post
-      * print response
-      Then status 200
-      * def id = response.data.id
+  @successful
+  Scenario: Create employees with method post for delete feature
+    Given request employee
+    When method post
+    Then status 200
+    * def id = response.data.id
