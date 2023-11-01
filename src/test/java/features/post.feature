@@ -3,30 +3,22 @@ Feature: Create employees in dummy api example
   Background:
     * url baseURL
     * path "api/v1/create"
-    * def create_employees = read("classpath:../json_filles/post/create_employees.json")
     * def jsonBody200 = read("classpath:../json_filles/post/response_post_create_employee.json")
+    * def salary = karate.call("classpath:../files_javascript/ramdon_salary.js")
+    * def name = karate.call("classpath:../files_javascript/ramdon_name.js")
+    * def age = karate.call("classpath:../files_javascript/ramdon_age.js")
+    * def employee = {"name": "#(name)", "salary": "#(salary)", "age": "#(age)"}
 
-  Scenario Outline: Create employees with method post
-      * def emp = <employee>
-      Given request emp
-      When method post
-      * print responseStatus
-      Then assert responseStatus == <status> || responseStatus == 429
-      * print response
-      And match jsonBody200 != response && responseStatus == 429 || response == jsonBody200
-
-    Examples:
-      | employee                 | status |
-      |create_employees.employee1| 200    |
-      |create_employees.employee2| 200    |
-      |create_employees.employee3| 200    |
-      | " "                      | 200    |
+  Scenario: Create employees with method post
+    Given request employee
+    When method post
+    Then status 200
+    And match response == jsonBody200
 
     @successful
-    Scenario:
-      Given request {"name": "Salome", "salary": 200000, "age": 24 }
+    Scenario: Create employees with method post for delete feature
+      Given request employee
       When method post
       * print response
-      Then assert responseStatus == 200 || responseStatus == 429
+      Then status 200
       * def id = response.data.id
-      * print id

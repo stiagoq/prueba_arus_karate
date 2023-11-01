@@ -2,25 +2,28 @@ Feature: upload employees in dummy api example
 
   Background:
     * url baseURL
-    * def upload_employees = read("classpath:../json_filles/put/upload_employee.json")
     * def jsonBody200 = read("classpath:../json_filles/put/response_upload_employee.json")
-    * def jsonBody400 = read("classpath:../json_filles/put/reponse_error_put.json")
+    * def salary = karate.call("classpath:../files_javascript/ramdon_salary.js")
+    * def name = karate.call("classpath:../files_javascript/ramdon_name.js")
+    * def age = karate.call("classpath:../files_javascript/ramdon_age.js")
+    * def upload1 = {"name": "#(name)", "salary": "#(salary)"}
+    * def upload2 = {"age": "#(age)"}
+    * def upload3 = {"age": "#(age)","name": "#(name)"}
 
   Scenario Outline: Upload employees with method put
-    * def upl = <upload>
     Given path "api/v1/update<id>"
-    And request upl
+    And request <upload>
     When method put
-    * print responseStatus
-    * print response
-    Then assert responseStatus == <status> || responseStatus == 429
-    And match <jsonMatch> != response && responseStatus == 429 || response == <jsonMatch> || responseStatus == 405
+    Then status <status>
+    And match response == <jsonMatch>
 
     Examples:
-      |id|upload                   |status| jsonMatch  |
-      |/2 |upload_employees.upload1|200   | jsonBody200|
-      |   |upload_employees.upload1|405   | jsonBody400|
-      #|2 |upload_employees.upload1|200   |
+      |id|upload  |status| jsonMatch  |
+      |/2 |upload2|200   | jsonBody200|
+      |/3 |upload1|200   | jsonBody200|
+      |/4 |upload3|200   | jsonBody200|
+
+
 
 
 
